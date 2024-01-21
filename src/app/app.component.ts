@@ -40,8 +40,8 @@ import { ExampleDirective } from './components/directives/example.directive';
     <app-ngtemplateexample></app-ngtemplateexample>
     <hr>
     <app-implicit-example></app-implicit-example>
-    <!-- <hr>
-    <app-parent></app-parent> -->
+    <hr>
+    <app-parent></app-parent>
     <hr>
     <app-c1 #c1></app-c1>
     <hr>

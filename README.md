@@ -159,3 +159,29 @@ Example using the "example" injection token in the `child` component's providers
 
 ### QueryList - changes Property
 When using the `ViewChildren` decorator, you can subscribe to the `changes` property of the `QueryList` to track additions or removals of elements on the page. This provides an efficient way to observe and react to dynamic changes in the DOM.
+
+## Renderer2
+In Angular, `Renderer2` is a class used for manipulating HTML elements. It is particularly important for ensuring the portability of Angular applications across different platforms.
+
+- `Renderer2` provides a standardized API for DOM manipulation, facilitating the operation of applications in browsers, Web Workers, or other platforms. Using `Renderer2`, you can manage DOM manipulations in Angular applications running outside the browser environment.
+- `Renderer2` is a built-in class in Angular. To use it, you simply need to inject it into the relevant component.
+
+## ContentChild & ContentChildren
+`ContentChild` and `ContentChildren` are decorators in Angular used to reference any object within `ng-content` in the child component class.
+
+Example in a parent component:
+```html
+<app-child>
+   <input type="text" #templateVariable>
+</app-child>
+```
+Referencing in a child component:
+```javascript
+@ContentChild("templateVariable") _input: ElementRef;
+
+ngAfterContentInit() {
+  console.log(this._input);
+}
+```
+
+These decorators are used to access content that is projected into the component's view from a parent component. `ContentChild` is used to access a single child element, while `ContentChildren` is used to access multiple child elements or a group of elements as a `QueryList`. This allows for dynamic and flexible content management within Angular components, especially useful when creating reusable and complex component libraries.

@@ -10,7 +10,9 @@ import { NgTemplateOutlet } from '@angular/common';
   <ng-template #t>
     Parent Ng-template content
   </ng-template>
-   <app-child [childContainer]="t"></app-child>
+   <app-child [childContainer]="t">
+    Helloo <br> <input type="text" #templateVariable>
+  </app-child>
   `
 })
 export class ParentComponent {

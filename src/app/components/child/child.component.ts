@@ -1,5 +1,5 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { Component, Input, TemplateRef } from '@angular/core';
+import { Component, ContentChild, ElementRef, Input, TemplateRef } from '@angular/core';
 import { ParentComponent } from '../parent/parent.component';
 
 @Component({
@@ -14,4 +14,9 @@ import { ParentComponent } from '../parent/parent.component';
 })
 export class ChildComponent {
 @Input() childContainer: TemplateRef<HTMLElement>;
+@ContentChild("templateVariable") _input : ElementRef;
+
+ngAfterContentInit(){
+  console.log(this._input);
+}
 }
