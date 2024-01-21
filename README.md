@@ -7,7 +7,7 @@
 When using multiple `ng-content` elements, they can be distinguished by using the `select` attribute with specific names. Names like `header`, `body`, and `footer` are special identifiers for `ng-content` and can be used directly with corresponding tags in the parent component.
 
 Example usage in the parent App Component:
-```jtml
+```html
 <app-home>
     <header> This is header's content. </header>
     <body> This is body's content. </body>
