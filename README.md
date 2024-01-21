@@ -95,7 +95,7 @@ This method displays the `ng-template` object by referencing it from the compone
 
 ### Usage Scenarios
 `ng-template` should be used for displaying templates based on if-else conditions.
-```javascript
+```html
 <div *ngIf="value; then template1 else template2">
 </div> 
 <ng-template #template1> Template 1 Content </ng-template>
