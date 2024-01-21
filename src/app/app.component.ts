@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { NgcontainerexampleComponent } from './components/ngcontainerexample/ngcontainerexample.component';
+import { NgtemplateexampleComponent } from './components/ngtemplateexample/ngtemplateexample.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent],
+  imports: [RouterOutlet, HomeComponent, NgcontainerexampleComponent,NgtemplateexampleComponent],
   template:`
     <h1>App Comp</h1>
     <app-home>
@@ -20,7 +22,9 @@ import { HomeComponent } from './components/home/home.component';
 
       Not attached content
     </app-home>
-
+    <hr>
+    <app-ngcontainerexample></app-ngcontainerexample>
+    <app-ngtemplateexample></app-ngtemplateexample>
   `
 })
 export class AppComponent {
