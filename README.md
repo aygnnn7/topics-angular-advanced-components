@@ -7,7 +7,7 @@
 When using multiple `ng-content` elements, they can be distinguished by using the `select` attribute with specific names. Names like `header`, `body`, and `footer` are special identifiers for `ng-content` and can be used directly with corresponding tags in the parent component.
 
 Example usage in the parent App Component:
-```javascript
+```html
 <app-home>
     <header> This is header's content. </header>
     <body> This is body's content. </body>
@@ -15,7 +15,7 @@ Example usage in the parent App Component:
 </app-home>
 ```
 And in the child Home Component:
-```javascript
+```html
 <ng-content select="header"></ng-content>
 <ng-content select="body"></ng-content>
 <ng-content select="footer"></ng-content>
@@ -33,7 +33,7 @@ In the parent App Component:
 </app-home>
 ```
 In the child Home Component:
-```javascript
+```html
 <table>
     <tr>
       <td style="background-color: blue;"><ng-content select=".leftMenu"></ng-content></td>
@@ -71,7 +71,7 @@ products: any[] = [
 `ng-template`, like `ng-container`, allows for creating sections or areas on a page without adding to the DOM. The main difference with `ng-template` is that even when it is rendered, the HTML elements inside it are not processed onto the DOM unless explicitly called. `ng-template` must be deliberately made visible using `ngTemplateOutlet` directive and `TemplateRef` & `ViewContainerRef` objects.
 
 Example using `ngTemplateOutlet`:
-```javascript
+```html
 <ng-container *ngTemplateOutlet="test">
     Ng-Container content
 </ng-container>
