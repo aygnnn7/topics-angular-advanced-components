@@ -6,14 +6,18 @@ import { AfterViewInit, Component, TemplateRef, ViewChild, ViewContainerRef } fr
   standalone: true,
   imports: [NgTemplateOutlet],
   template:`
-
-  <ng-container *ngTemplateOutlet="test">
+  <hr>
+  <ng-container [ngTemplateOutlet]="test" 
+                [ngTemplateOutletContext]="{x : 123, y : 3, $implicit:000}">
     Ng-Container content
   </ng-container>
-  <ng-template #test>
-    Ng Template content
-  </ng-template>
+  <ng-template #test let-x="x" let-y="y" let-z>
   
+    <br>
+    {{x}},{{y}},{{z}}
+  </ng-template>
+
+
   `
 })
 export class NgtemplateexampleComponent implements AfterViewInit{
